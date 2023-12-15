@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/83/0c/b1/830cb15c5a7195eade40d6014c413a2d.jpg">
+    <link rel="author" content="mikasa409">
+    <title>RTX Update 15/12 7:53</title>
+</head>
+<body>
+    <!-----hi----->
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #cf0ea5;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.p3 {
+    font-family: Cursive;
+    color:pink;
+}
+
+.button1:active {
+    transform: scale(0.96);
+}
+
+.button1::before,
+.button1::after,{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 150%;
+}
+
+.button2:active {
+    transform: scale(0.96);
+}
+
+.button2::before,
+.button2::after,{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 150%;
+}
+
+
+.button3:active {
+    transform: scale(0.96);
+}
+
+.button3::before,
+.button3::after,{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 150%;
+}
+
+
+
+.button4:active {
+    transform: scale(0.96);
+}
+
+.button4::before:,
+.button4::after,{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 150%;
+}
+
+
+
+:root {
+    /*--primary-color: #edf2fc;
+    --secondary-color: #212121;
+    */
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+
+
+body {
+  
+  block-size: auto;
+  inset-block: auto;
+  margin-block: auto;
+  offset-block-end: auto;
+  background-color: #1a1c28;
+}
+
+.a {
+    text-align: end;
+}
+
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 22px;
+    background: pink;
+    border-radius: 6px;
+    color:aliceblue
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0,1)
+}
+
+
+
+    </style>
+    <ul>
+        <li><a href="">Home</a></li>
+      </ul>
+      <div id="current-time"></div>
+
+<style>
+	#snowflakeContainer{position:absolute;left:0px;top:0px;}
+	.snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+	.snowflake:hover {cursor:default}
+</style>
+<div id='snowflakeContainer'>
+<p class='snowflake'>❄</p>
+</div>
+<script style='text/javascript'>
+	//<![CDATA[
+	var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+	//]]>
+</script>
+</body>
+<br><br><br><br>
+<center><p class="p3"> Welcome to webiste me 🌙
+</p>
+</center>
+<center><p class="p3"><time>Status : Dang choi server minebachay.com </p>
+
+</center>
+
+<center>
+    <a href="https://www.facebook.com/profile.php?id=100091224458897" target="_blank">Facebook Admin 🧑‍💻</a>
+    <a href="https://www.facebook.com/MinhDucSenpaii" target="_blank">Facebook Staff 🧑‍💻</a>
+    <a href="https://www.facebook.com/messages/t/7788809634481094" target="_blank">Alien Team 👾</a>
+    <a href="" target="_blank">Box Zalo [ Coming soon] </a>
+    <a href="" target="_blank">Box Tele[ Coming soon]</a>
+    
+</center>
+<center>
+<br><br><br>
+<button type="button" onclick="alert('Website ko ho tro luot dien thoai vi giao dien se bi loi admin se fix no som nhat co the 🌙')">🌙 CLICK VAO DE CHECK THONG BAO 🌙</button>
+</center>
+
+
+
